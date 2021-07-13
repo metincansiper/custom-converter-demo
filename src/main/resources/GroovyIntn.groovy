@@ -12,7 +12,7 @@ class GroovyIntn {
 		org.biopax.paxtools.model.level3.Protein left = model.physicalEntityFromModel(entityModel)
 		org.biopax.paxtools.model.level3.Protein right = model.physicalEntityFromModel(entityModel)
 		
-		org.biopax.paxtools.model.level3.Transport transport = model.addNewInteraction(Transport.class)
+		org.biopax.paxtools.model.level3.Transport transport = model.addNewInteraction(org.biopax.paxtools.model.level3.Transport.class)
 		transport.addLeft(left)
 		transport.addRight(right)
 		
