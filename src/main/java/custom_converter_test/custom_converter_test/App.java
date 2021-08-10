@@ -35,9 +35,11 @@ public class App
         converter.addToModel(template);
         
         String validationRes = converter.validate();
+        System.out.println("validation result:");
         System.out.println(validationRes);
         
         String res = converter.convertToBiopax();
+        System.out.println("conversion result:");
         System.out.println(res);
     }
 }
