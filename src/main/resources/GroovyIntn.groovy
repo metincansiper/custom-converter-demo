@@ -4,13 +4,14 @@ class GroovyIntn {
     		factoid.model.CustomizableModel model = props.get("model")
     		factoid.util.GsonUtil gsonUtil = new factoid.util.GsonUtil()
     		
-    		com.google.gson.JsonObject entityObj = template.get("participant").getAsJsonObject()
-    		factoid.model.EntityModel entityModel =  gsonUtil.entityModelFromJsonObj(entityObj)
+    		com.google.gson.JsonArray entityObjs = template.get("participants").getAsJsonArray()
+    		com.google.gson.JsonObject leftEntityObj = entityObjs[0]
+    		com.google.gson.JsonObject rightEntityObj = entityObjs[1]
+    		factoid.model.EntityModel leftEntityModel =  gsonUtil.entityModelFromJsonObj(leftEntityObj)
+    		factoid.model.EntityModel rightEntityModel =  gsonUtil.entityModelFromJsonObj(rightEntityObj)
 		
-		//factoid.model.XrefModel xrefModel = new XrefModel("GO:0000939", "gene ontology")
-		//factoid.model.EntityModel entityModel = new EntityModel("Aurora B", xrefModel, "protein")
-		org.biopax.paxtools.model.level3.Protein left = model.physicalEntityFromModel(entityModel)
-		org.biopax.paxtools.model.level3.Protein right = model.physicalEntityFromModel(entityModel)
+		org.biopax.paxtools.model.level3.Protein left = model.physicalEntityFromModel(leftEntityModel)
+		org.biopax.paxtools.model.level3.Protein right = model.physicalEntityFromModel(rightEntityModel)
 		
 		org.biopax.paxtools.model.level3.Transport transport = model.addNewInteraction(org.biopax.paxtools.model.level3.Transport.class)
 		transport.addLeft(left)
@@ -18,12 +19,5 @@ class GroovyIntn {
 		
 		transport.addComment("http://www.w3.org/2001/XMLSchema#string\">REPLACED http://pathwaycommons.org/pc12/Transport_e5c5c3064a35275da036764754d82987")
     		
-    		//com.google.gson.JsonArray ppts = template.get("participants").getAsJsonArray()
-    		//com.google.gson.JsonObject ppt = ppts[0]
-    		
-    		//java.lang.String name = ppt.get("name")
-    		//java.util.List<factoid.model.EntityModel> componentModels = gsonUtil.enityModelsFromJsonArray(ppt.get("components").getAsJsonArray())
-    		
-    		//model.getOrCreatePhysicalEntity(org.biopax.paxtools.model.level3.Complex.class, name, null, false, componentModels)
     }
 }

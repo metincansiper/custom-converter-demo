@@ -2,14 +2,31 @@
 	"interactions": [
 		{
 			"type": "Custom Interaction",
-			"participant": {
-				"type": "protein",
-				"name": "Aurora B",
-				"xref": {
-					"id": "GO:0000939",
-					"db": "gene ontology"
+			"participants": [
+				{
+					"type": "protein",
+					"name": "Aurora B",
+					"cellularLocation": {
+						"term": "inner kinetochore of condensed chromosome",
+						"xref": {
+							"id": "GO:0000939",
+							"db": "gene ontology"
+						}
+					},
+					"xref": {
+						"id": "Q96GD4",
+						"db": "UniProtKB"
+					}
+				},
+				{
+					"type": "protein",
+					"name": "Aurora B",
+					"xref": {
+						"id": "Q96GD4",
+						"db": "UniProtKB"
+					}
 				}
-			}
+			]
 		}
 	]
 } 
