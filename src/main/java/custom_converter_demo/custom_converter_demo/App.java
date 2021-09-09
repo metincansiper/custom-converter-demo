@@ -1,4 +1,4 @@
-package custom_converter_test.custom_converter_test;
+package custom_converter_demo.custom_converter_demo;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

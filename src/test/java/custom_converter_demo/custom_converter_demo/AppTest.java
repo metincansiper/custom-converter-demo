@@ -1,4 +1,4 @@
-package custom_converter_test.custom_converter_test;
+package custom_converter_demo.custom_converter_demo;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
