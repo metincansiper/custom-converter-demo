@@ -23,8 +23,10 @@ public class App
 	// it will be the input for factoid json to biopax conversion
         JsonObject template = gson.fromJson(reader, JsonObject.class);
 	// we need to attach the absolute path of the groovy script to the data that we read from
-	// data.json file for each of the interactions
+	// data.json file for each of the custom interactions
 	// each groovy script tells what must be done for the conversion
+    // in this example we want each of the custom interactions to behave in the same way
+    // otherwise we would use different groovy scripts for different custom interactions
         String scriptRelPath = "src/main/resources/GroovyIntn.groovy";
 	// absolute path of the project
         String projectPath = System.getProperty("user.dir");
