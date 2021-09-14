@@ -36,7 +36,7 @@
 	<dependency>
 	    <groupId>com.github.pathwaycommons</groupId>
 	    <artifactId>factoid-converters</artifactId>
-	    <version>c873733315</version>
+	    <version>5b1b10ba40</version>
 	</dependency>
   </dependencies>
 </project>
